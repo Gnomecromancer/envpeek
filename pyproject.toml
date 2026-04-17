@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "envpeek"
-version = "0.1.1"
+version = "0.1.2"
 description = "Windows environment inspector: PATH analysis, missing dirs, duplicates, system vs user vars"
 readme = "README.md"
 license = { text = "MIT" }
