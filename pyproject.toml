@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envpeek"
+version = "0.1.0"
+description = "Windows environment inspector: PATH analysis, missing dirs, duplicates, system vs user vars"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["click","colorama"]
+
+[project.optional-dependencies]
+dev = ["pytest", "click","colorama"]
+
+[project.scripts]
+envpeek = "envpeek.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["envpeek*"]
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning"]
